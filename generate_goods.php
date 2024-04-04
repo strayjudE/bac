@@ -146,10 +146,10 @@ $resident = $result->fetch_assoc();
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
                                                     <strong>a.</strong> Valid <strong>PHILGEPS Registration Certificate (Platinum Membership)</strong> (all pages) <br>
                                                     &nbsp;&nbsp;Date of Registration:__________ Expiry Date:_________________ <br><br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Registration Certificate:</strong> <br>
+                                                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;<strong>Registration Certificate:</strong> <br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><?= ($resident['sec'] == 'None' || $resident['sec'] == '') ? '____SEC' : (($resident['sec'] == 'Pass') ? '__/__SEC' : '__X__SEC') ?>&nbsp;&nbsp;or&nbsp;&nbsp;<?= ($resident['dti'] == 'None' || $resident['dti'] == '') ? '____DTI' : (($resident['dti'] == 'Pass') ? '__/__DTI' : '__X__DTI') ?>&nbsp;&nbsp;or&nbsp;&nbsp;<?= ($resident['cda'] == 'None' || $resident['cda'] == '') ? '____CDA' : (($resident['cda'] == 'Pass') ? '__/__CDA' : '__X__CDA') ?></strong><br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;<strong>Mayor’s or Business Permit</strong> issued by the City/Municipality where the principal place of the business of the prospective bidder is located. <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Tax Clearance</strong> per E.O. No. 398, s. 2005 as finally reviewed and approved by the Bureau of Internal Revenue (BIR)
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Tax Clearance</strong> per E.O. No. 398, s. 2005 as finally reviewed and approved by the Bureau of Internal Revenue (BIR) -->
                                                 </h3>
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left"><strong>Other Related Certifications/ Registration and Permits.</strong></h3>
                                             </div>
@@ -207,7 +207,7 @@ $resident = $result->fetch_assoc();
                                             </div>
                                         </div>
                                     </div>
-                                    <br><br>
+                                    <br><br><br><br><br><br><br><br><br><br>
                                     <div class="d-flex flex-wrap justify-content-center align-items-center" style="border-bottom: 1px solid red">
                                         <div class="text-center">
                                             <img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
@@ -340,7 +340,6 @@ $resident = $result->fetch_assoc();
                                         </div>
                                     </div>
 
-
                                     <div class="row">
                                         <div class="col">
                                             <div class="col-lg-12 col-md-12 col-sm-12 text-left">
@@ -368,7 +367,7 @@ $resident = $result->fetch_assoc();
                                             </div>
                                             <div class="form-group row">
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                    <strong> The Supplier’s Audited Financial Statements</strong>, showing among others, the Supplier’s total assets and liabilities, stamped “received” by the BIR or its duly accredited and authorize institution, for the preceding calendar year which should not be earlier than two (2) years from the date of bid submission;
+                                                    <strong>g.</strong> The prospective bidder’s computation of <strong>Net Financial Contracting Capacity (NFCC);</strong> or A committed Line Of Credit from a Universal or Commercial Bank in lieu of its NFCC computation;
                                                 </h3>
                                             </div>
                                         </div>
@@ -414,20 +413,6 @@ $resident = $result->fetch_assoc();
 
                                     <div class="row">
                                         <div class="col">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <img src="./assets/img/bordersss.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                    <strong>g.</strong> The prospective bidder’s computation of <strong>Net Financial Contracting Capacity (NFCC);</strong> or A committed Line Of Credit from a Universal or Commercial Bank in lieu of its NFCC computation;
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
                                             <div class="form-group row">
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left"><strong>Class "B" Documents</strong></h3>
                                             </div>
@@ -452,7 +437,7 @@ $resident = $result->fetch_assoc();
                                     <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-center">
                                         <strong>REMARK: &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-regular fa-square" style="font-size: 1.5em;"></i>
                                             COMPLYING&nbsp;&nbsp;&nbsp;&nbsp; <i class="<?=
-                                                                                        ($resident['dti'] == 'Fail' || $resident['sec'] == 'Fail' || $resident['cda'] == 'Fail' || $resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['k_goods'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['noa'] == 'Fail' || $resident['sales'] == 'Fail' || $resident['production'] == 'Fail' || $resident['manpower'] == 'Fail' || $resident['aftersales'] == 'Fail')
+                                                                                        ($resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['k_goods'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['noa'] == 'Fail' || $resident['sales'] == 'Fail' || $resident['production'] == 'Fail' || $resident['manpower'] == 'Fail' || $resident['aftersales'] == 'Fail')
                                                                                             ? 'far fa-check-square'
                                                                                             : 'fa-regular fa-square'
                                                                                         ?>" style="font-size: 1.5em;"></i>
@@ -673,7 +658,7 @@ $resident = $result->fetch_assoc();
                                     <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-center">
                                         <strong>REMARK: &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-regular fa-square" style="font-size: 1.5em;"></i>
                                             COMPLYING&nbsp;&nbsp;&nbsp;&nbsp; <i class="<?=
-                                                                                        ($resident['dti'] == 'Fail' || $resident['sec'] == 'Fail' || $resident['cda'] == 'Fail' || $resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['k_goods'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['noa'] == 'Fail' || $resident['sales'] == 'Fail' || $resident['production'] == 'Fail' || $resident['manpower'] == 'Fail' || $resident['aftersales'] == 'Fail')
+                                                                                        ($resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['k_goods'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['noa'] == 'Fail' || $resident['sales'] == 'Fail' || $resident['production'] == 'Fail' || $resident['manpower'] == 'Fail' || $resident['aftersales'] == 'Fail')
                                                                                             ? 'far fa-check-square'
                                                                                             : 'fa-regular fa-square'
                                                                                         ?>" style="font-size: 1.5em;"></i>

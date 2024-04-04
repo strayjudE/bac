@@ -146,10 +146,10 @@ $resident = $result->fetch_assoc();
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
                                                     <strong>a.</strong> Valid <strong>PHILGEPS Registration Certificate (Platinum Membership)</strong> (all pages) <br>
                                                     &nbsp;&nbsp;Date of Registration:__________ Expiry Date:_________________ <br><br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Registration Certificate:</strong> <br>
+                                                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;<strong>Registration Certificate:</strong> <br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><?= ($resident['sec'] == 'None' || $resident['sec'] == '') ? '____SEC' : (($resident['sec'] == 'Pass') ? '__/__SEC' : '__X__SEC') ?>&nbsp;&nbsp;or&nbsp;&nbsp;<?= ($resident['dti'] == 'None' || $resident['dti'] == '') ? '____DTI' : (($resident['dti'] == 'Pass') ? '__/__DTI' : '__X__DTI') ?>&nbsp;&nbsp;or&nbsp;&nbsp;<?= ($resident['cda'] == 'None' || $resident['cda'] == '') ? '____CDA' : (($resident['cda'] == 'Pass') ? '__/__CDA' : '__X__CDA') ?></strong><br>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;<strong>Mayor’s or Business Permit</strong> issued by the City/Municipality where the principal place of the business of the prospective bidder is located. <br>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Tax Clearance</strong> per E.O. No. 398, s. 2005 as finally reviewed and approved by the Bureau of Internal Revenue (BIR)
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Tax Clearance</strong> per E.O. No. 398, s. 2005 as finally reviewed and approved by the Bureau of Internal Revenue (BIR) -->
                                                 </h3>
                                             </div>
                                         </div>
@@ -228,7 +228,7 @@ $resident = $result->fetch_assoc();
                                             </div>
                                         </div>
                                     </div>
-
+                                    <br><br><br><br><br><br><br>
                                     <div class="d-flex flex-wrap justify-content-center align-items-center" style="border-bottom: 1px solid red">
                                         <div class="text-center">
                                             <img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
@@ -368,7 +368,37 @@ $resident = $result->fetch_assoc();
                                         </div>
                                     </div>
 
-                                    <br><br><br><br><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
+                                                <img src="./assets/img/borderss.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group row">
+                                                <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
+                                                    <strong>f.</strong> <strong>Project Requirements,</strong> which shall include the following;
+                                                </h3>
+                                                <div class="form-group row">
+                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
+                                                        <strong>a.</strong> Organizational Chart for the contract to be bid;
+                                                    </h3>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
+                                                        <strong>b.</strong> List of Contractor’s key personnel (e.g., Project Manager, Project Engineer, Materials Engineers, and Foreman), to be assigned to the contract to be bid, with their complete qualification and experience data.
+                                                    </h3>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
+                                                        <strong>c.</strong> List of contractor’s major equipment units, which are owned, leased, and/or under purchase agreements, supported by proof of ownership or certification of availability of equipment lessor/vendor for the duration of the project, as the case may be;
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br><br><br><br>
                                     <div class="d-flex flex-wrap justify-content-center align-items-center" style="border-bottom: 1px solid red">
                                         <div class="text-center">
                                             <img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
@@ -410,36 +440,6 @@ $resident = $result->fetch_assoc();
                                     <div class="row">
                                         <div class="col">
                                             <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <img src="./assets/img/borderss.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                    <strong>f.</strong> <strong>Project Requirements,</strong> which shall include the following;
-                                                </h3>
-                                                <div class="form-group row">
-                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                        <strong>a.</strong> Organizational Chart for the contract to be bid;
-                                                    </h3>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                        <strong>b.</strong> List of Contractor’s key personnel (e.g., Project Manager, Project Engineer, Materials Engineers, and Foreman), to be assigned to the contract to be bid, with their complete qualification and experience data.
-                                                    </h3>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                        <strong>c.</strong> List of contractor’s major equipment units, which are owned, leased, and/or under purchase agreements, supported by proof of ownership or certification of availability of equipment lessor/vendor for the duration of the project, as the case may be;
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
                                                 <img src="./assets/img/bordersss.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
@@ -464,70 +464,16 @@ $resident = $result->fetch_assoc();
                                             </div>
                                             <div class="form-group row">
                                                 <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
-                                                    <strong> The Supplier’s Audited Financial Statements</strong>, showing among others, the Supplier’s total assets and liabilities, stamped “received” by the BIR or its duly accredited and authorize institution, for the preceding calendar year which should not be earlier than two (2) years from the date of bid submission;
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                                    <div class="d-flex flex-wrap justify-content-center align-items-center" style="border-bottom: 1px solid red">
-                                        <div class="text-center">
-                                            <img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
-                                        </div>
-                                        <div class="text-center flex-grow-1">
-                                            <h3 class="mb-0">Republic of the Philippines</h3>
-                                            <h3 class="mb-0">Office of the City Mayor</h3>
-                                            <h3 class="fw-bold mb-0">BIDS AND AWARDS COMMITTEE</h3>
-                                            <p><i>San Carlos City, Pangasinan</i></p>
-                                        </div>
-                                        <div class="ms-auto mt-3 text-end">
-                                            <h3 class="col-lg-12 col-md-12 col-sm-12 text-left">INFRA TECHNICAL 4</h3>
-                                            <h3 class="mt-2 col-lg-12 col-md-12 col-sm-12 text-left">Date:________________</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">NAME OF CONTRACT:
-                                                            <div class="border-bottom">
-                                                                <?= strtoupper($resident['purok']) ?>
-                                                            </div>
-                                                        </h3>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">BIDDER/(S) NAME: <div class="border-bottom">
-                                                                <?= ucwords($resident['firstname']) ?>
-                                                            </div>
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <img src="./assets/img/bordersss.png" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
                                                     <strong>h.</strong> The prospective bidder’s computation of <strong>Net Financial Contracting Capacity (NFCC);</strong> or A committed Line Of Credit from a Universal or Commercial Bank in lieu of its NFCC computation;
                                                 </h3>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <img src="./assets/img/bordersss.png" alt="" class="img-fluid" style>
+                                                <img src="./assets/img/bordersss.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -539,7 +485,6 @@ $resident = $result->fetch_assoc();
                                         </div>
                                     </div>
 
-                                    <br><br><br><br>
                                     <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-left">
                                         &nbsp;&nbsp;&nbsp;&nbsp;<strong>Note:</strong> Any missing documents in the above-mentioned checklist is a ground for outright rejection of the bid.
                                     </h3>
@@ -547,7 +492,7 @@ $resident = $result->fetch_assoc();
                                     <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-center">
                                         <strong>REMARK: &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-regular fa-square" style="font-size: 1.5em;"></i>
                                             COMPLYING&nbsp;&nbsp;&nbsp;&nbsp; <i class="<?=
-                                                                                        ($resident['dti'] == 'Fail' || $resident['sec'] == 'Fail' || $resident['cda'] == 'Fail' || $resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['c_value'] == 'Fail' || $resident['c_role'] == 'Fail' || $resident['d_completion'] == 'Fail' || $resident['n_work'] == 'Fail' || $resident['v_completion'] == 'Fail' || $resident['percentage'] == 'Fail' || $resident['notice'] == 'Fail')
+                                                                                        ($resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['c_value'] == 'Fail' || $resident['c_role'] == 'Fail' || $resident['d_completion'] == 'Fail' || $resident['n_work'] == 'Fail' || $resident['v_completion'] == 'Fail' || $resident['percentage'] == 'Fail' || $resident['notice'] == 'Fail')
                                                                                             ? 'far fa-check-square'
                                                                                             : 'fa-regular fa-square'
                                                                                         ?>" style="font-size: 1.5em;"></i>
@@ -588,7 +533,7 @@ $resident = $result->fetch_assoc();
                                         <span class="d-block mx-auto">Evaluator</span>
                                     </h3>
 
-                                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <br><br><br>
                                     <div class="d-flex flex-wrap justify-content-center align-items-center" style="border-bottom: 1px solid red">
                                         <div class="text-center">
                                             <img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
@@ -770,7 +715,7 @@ $resident = $result->fetch_assoc();
                                     <h3 class="mt-5 col-lg-12 col-md-12 col-sm-12 mt-sm-2 text-center">
                                         <strong>REMARK: &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-regular fa-square" style="font-size: 1.5em;"></i>
                                             COMPLYING&nbsp;&nbsp;&nbsp;&nbsp; <i class="<?=
-                                                                                        ($resident['dti'] == 'Fail' || $resident['sec'] == 'Fail' || $resident['cda'] == 'Fail' || $resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['c_value'] == 'Fail' || $resident['c_role'] == 'Fail' || $resident['d_completion'] == 'Fail' || $resident['n_work'] == 'Fail' || $resident['v_completion'] == 'Fail' || $resident['percentage'] == 'Fail' || $resident['notice'] == 'Fail')
+                                                                                        ($resident['o_name'] == 'Fail' || $resident['n_contract'] == 'Fail' || $resident['d_delivery'] == 'Fail' || $resident['c_duration'] == 'Fail' || $resident['d_contract'] == 'Fail' || $resident['c_value'] == 'Fail' || $resident['c_role'] == 'Fail' || $resident['d_completion'] == 'Fail' || $resident['n_work'] == 'Fail' || $resident['v_completion'] == 'Fail' || $resident['percentage'] == 'Fail' || $resident['notice'] == 'Fail')
                                                                                             ? 'far fa-check-square'
                                                                                             : 'fa-regular fa-square'
                                                                                         ?>" style="font-size: 1.5em;"></i>

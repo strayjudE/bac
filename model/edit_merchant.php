@@ -13,9 +13,6 @@ $fname 		= $conn->real_escape_string($_POST['fname']);
 $email 	    = $conn->real_escape_string($_POST['email']);
 $number 	= $conn->real_escape_string($_POST['number']);
 $address 	= $conn->real_escape_string($_POST['address']);
-$cda 		= $conn->real_escape_string($_POST['cda']);
-$dti 		= $conn->real_escape_string($_POST['dti']);
-$sec 		= $conn->real_escape_string($_POST['sec']);
 $oname 		= $conn->real_escape_string($_POST['ownername']);
 $ncontract 		= $conn->real_escape_string($_POST['ncontract']);
 $cduration 		= $conn->real_escape_string($_POST['cduration']);
@@ -54,7 +51,7 @@ if ($nat['id'] == $id || count($nat) <= 0) {
 		if (!empty($profile) && !empty($profile2)) {
 
 			$query = "UPDATE tblresident SET national_id='$national_id',`picture`='$profile', `firstname`='$fname',`phone`='$number', `email`='$email',`address`='$address',
-						`sec`= '$sec',`dti`= '$dti',`cda`= '$cda',`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
+						`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
 						`d_delivery`='$ddelivery',`k_goods`='$goods',`noa`='$noa',`sales`='$sale',`production`='$production',`manpower`='$manpower',`aftersales`='$aftersales',`c_value`='$cvalue',`c_role`='$crole',`d_completion`='$dcompletion',`n_work`='$nwork',`v_completion`='$vcompletion', `percentage`='$percentage',`notice`='$notice', `cert`='$cert',`resident_type`='$inactive'
 						WHERE id=$id;";
 
@@ -66,7 +63,7 @@ if ($nat['id'] == $id || count($nat) <= 0) {
 		} else if (!empty($profile) && empty($profile2)) {
 
 			$query = "UPDATE tblresident SET national_id='$national_id',`picture`='$profile', `firstname`='$fname',`phone`='$number', `email`='$email',`address`='$address',
-						`sec`= '$sec',`dti`= '$dti',`cda`= '$cda',`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
+						o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
 						`d_delivery`='$ddelivery',`k_goods`='$goods',`noa`='$noa',`sales`='$sale',`production`='$production',`manpower`='$manpower',`aftersales`='$aftersales',`c_value`='$cvalue',`c_role`='$crole',`d_completion`='$dcompletion',`n_work`='$nwork',`v_completion`='$vcompletion', `percentage`='$percentage',`notice`='$notice', `cert`='$cert',`resident_type`='$inactive'
 						WHERE id=$id;";
 
@@ -78,7 +75,7 @@ if ($nat['id'] == $id || count($nat) <= 0) {
 		} else if (empty($profile) && !empty($profile2)) {
 
 			$query = "UPDATE tblresident SET national_id='$national_id',`picture`='$newName', `firstname`='$fname',`phone`='$number', `email`='$email',`address`='$address',
-							`sec`= '$sec',`dti`= '$dti',`cda`= '$cda',`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
+							`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
 							`d_delivery`='$ddelivery',`k_goods`='$goods',`noa`='$noa',`sales`='$sale',`production`='$production',`manpower`='$manpower',`aftersales`='$aftersales',`c_value`='$cvalue',`c_role`='$crole',`d_completion`='$dcompletion',`n_work`='$nwork',`v_completion`='$vcompletion', `percentage`='$percentage',`notice`='$notice', `cert`='$cert',`resident_type`='$inactive'
 							WHERE id=$id;";
 
@@ -95,7 +92,7 @@ if ($nat['id'] == $id || count($nat) <= 0) {
 			}
 		} else {
 			$query = "UPDATE tblresident SET national_id='$national_id', `firstname`='$fname', `phone`='$number', `email`='$email',`address`='$address',
-							`sec`= '$sec',`dti`= '$dti',`cda`= '$cda',`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
+							`o_name`='$oname',`n_contract`='$ncontract',`c_duration`='$cduration',`d_contract`='$dcontract',
 							`d_delivery`='$ddelivery',`k_goods`='$goods',`noa`='$noa',`sales`='$sale',`production`='$production',`manpower`='$manpower',`aftersales`='$aftersales',`c_value`='$cvalue',`c_role`='$crole',`d_completion`='$dcompletion',`n_work`='$nwork',`v_completion`='$vcompletion', `percentage`='$percentage',`notice`='$notice', `cert`='$cert',`resident_type`='$inactive'
 							WHERE id=$id;";
 

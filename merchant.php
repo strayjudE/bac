@@ -97,7 +97,6 @@ while ($row = $result2->fetch_assoc()) {
                                                     <th>Contact Number</th>
                                                     <td>Category for Bidding</td>
                                                     <th>Project to Bid</th>
-                                                    <th>SEC / DTI / CDA</th>
                                                     <?php if (isset($_SESSION['username'])) : ?>
                                                         <th scope="col">Action</th>
                                                     <?php endif ?>
@@ -121,11 +120,11 @@ while ($row = $result2->fetch_assoc()) {
                                                             <td><?= $row['phone'] ?></td>
                                                             <td><?= $row['category'] ?></td>
                                                             <td class="text-uppercase"><?= $row['purok'] ?></td>
-                                                            <td><?= $row['sec'] . ' / ' . $row['dti'] . ' / ' . $row['cda'] ?></td>
+
                                                             <?php if (isset($_SESSION['username'])) : ?>
                                                                 <td>
                                                                     <div class="form-button-action">
-                                                                        <a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-secondary" title="Edit Merchant" onclick="editResident(this)" data-id="<?= $row['id'] ?>" data-sec="<?= $row['sec'] ?>" data-category="<?= $row['category'] ?>" data-dti="<?= $row['dti'] ?>" data-cda="<?= $row['cda'] ?>" data-oname="<?= $row['o_name'] ?>" data-ncontract="<?= $row['n_contract'] ?>" data-cduration="<?= $row['c_duration'] ?>" data-enduser="<?= $row['sales'] ?>" data-dcontract="<?= $row['d_contract'] ?>" data-datedelivery="<?= $row['d_delivery'] ?>" data-kgoods="<?= $row['k_goods'] ?>" data-noa="<?= $row['noa'] ?>" data-production="<?= $row['production'] ?>" data-manpower="<?= $row['manpower'] ?>" data-after="<?= $row['aftersales'] ?>" data-contractvalue="<?= $row['c_value'] ?>" data-crole="<?= $row['c_role'] ?>" data-dcompletion="<?= $row['d_completion'] ?>" data-nwork="<?= $row['n_work'] ?>" data-vcompletion="<?= $row['v_completion'] ?>" data-percentage="<?= $row['percentage'] ?>" data-notice="<?= $row['notice'] ?>" data-cert="<?= $row['cert'] ?>" data-national="<?= $row['national_id'] ?>" data-fname="<?= $row['firstname'] ?>" data-number="<?= $row['phone'] ?>" data-email="<?= $row['email'] ?>" data-address="<?= $row['address'] ?>" data-purok="<?= $row['purok'] ?>" data-img="<?= $row['picture'] ?>" data-dead="<?= $row['resident_type']; ?>">
+                                                                        <a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-secondary" title="Edit Merchant" onclick="editResident(this)" data-id="<?= $row['id'] ?>" data-category="<?= $row['category'] ?>" data-oname="<?= $row['o_name'] ?>" data-ncontract="<?= $row['n_contract'] ?>" data-cduration="<?= $row['c_duration'] ?>" data-enduser="<?= $row['sales'] ?>" data-dcontract="<?= $row['d_contract'] ?>" data-datedelivery="<?= $row['d_delivery'] ?>" data-kgoods="<?= $row['k_goods'] ?>" data-noa="<?= $row['noa'] ?>" data-production="<?= $row['production'] ?>" data-manpower="<?= $row['manpower'] ?>" data-after="<?= $row['aftersales'] ?>" data-contractvalue="<?= $row['c_value'] ?>" data-crole="<?= $row['c_role'] ?>" data-dcompletion="<?= $row['d_completion'] ?>" data-nwork="<?= $row['n_work'] ?>" data-vcompletion="<?= $row['v_completion'] ?>" data-percentage="<?= $row['percentage'] ?>" data-notice="<?= $row['notice'] ?>" data-cert="<?= $row['cert'] ?>" data-national="<?= $row['national_id'] ?>" data-fname="<?= $row['firstname'] ?>" data-number="<?= $row['phone'] ?>" data-email="<?= $row['email'] ?>" data-address="<?= $row['address'] ?>" data-purok="<?= $row['purok'] ?>" data-img="<?= $row['picture'] ?>" data-dead="<?= $row['resident_type']; ?>">
                                                                             <?php if (isset($_SESSION['username'])) : ?>
                                                                                 <i class="fa fa-edit"></i>
                                                                             <?php else : ?>
@@ -162,7 +161,6 @@ while ($row = $result2->fetch_assoc()) {
                                                     <th>Contact Number</th>
                                                     <td>Category for Bidding</td>
                                                     <th>Project to Bid</th>
-                                                    <th>SEC / DTI / CDA</th>
                                                     <?php if (isset($_SESSION['username'])) : ?>
                                                         <th scope="col">Action</th>
                                                     <?php endif ?>
@@ -382,7 +380,7 @@ while ($row = $result2->fetch_assoc()) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label>SEC</label>
@@ -416,7 +414,7 @@ while ($row = $result2->fetch_assoc()) {
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <label><strong>GENERAL:</strong></label>
                                         <div class="row">
                                             <div class="col">
