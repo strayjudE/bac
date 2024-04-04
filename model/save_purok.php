@@ -1,0 +1,46 @@
+<?php
+include('../server/server.php');
+
+if (!isset($_SESSION['username'])) {
+    if (isset($_SERVER["HTTP_REFERER"])) {
+        header("Location: " . $_SERVER["HTTP_REFERER"]);
+    }
+}
+
+$purok     = $conn->real_escape_string($_POST['purok']);
+$details     = $conn->real_escape_string($_POST['details']);
+$abc = $conn->real_escape_string($_POST['budget']);
+
+if (!empty($purok) && !empty($details) && !empty($abc)) {
+
+    $insert  = "INSERT INTO tblpurok (`name`, `details`, `abc`) VALUES ('$purok', '$details', '$abc')";
+    $result  = $conn->query($insert);
+
+    if ($result === true) {
+        $_SESSION['message'] = 'Project to bid added!';
+        $_SESSION['success'] = 'success';
+    } else {
+        $_SESSION['message'] = 'Something went wrong!';
+        $_SESSION['success'] = 'danger';
+    }
+} else if (!empty($purok) && empty($details) && empty($abc)) {
+
+    $insert  = "INSERT INTO tblpurok (`name`, `details`) VALUES ('$purok', '$details', '$abc')";
+    $result  = $conn->query($insert);
+
+    if ($result === true) {
+        $_SESSION['message'] = 'Project to bid added!';
+        $_SESSION['success'] = 'success';
+    } else {
+        $_SESSION['message'] = 'Something went wrong!';
+        $_SESSION['success'] = 'danger';
+    }
+} else {
+
+    $_SESSION['message'] = 'Please fill up the form completely!';
+    $_SESSION['success'] = 'danger';
+}
+
+header("Location: ../purok.php");
+
+$conn->close();
