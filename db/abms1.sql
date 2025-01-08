@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 04:05 PM
+-- Generation Time: Nov 16, 2024 at 03:15 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -75,7 +75,7 @@ CREATE TABLE `tblbrgy_info` (
 --
 
 INSERT INTO `tblbrgy_info` (`id`, `province`, `town`, `brgy_name`, `number`, `text`, `image`, `city_logo`, `brgy_logo`) VALUES
-(1, 'Pangasinan', 'San Carlos City', 'Brgy. Turac', '0919-1234567', 'A midterm project requirement for ELECTIVE 1', '18052023164728dashboard.jpg', '03052021033434brgy-logo.png', '18052023165132municipality.png');
+(1, 'Pangasinan', 'San Carlos City', 'Palaris St. ', '0919-1234567', 'asd', '14032024025532logo_ipt.png', '03052021033434brgy-logo.png', '18052023165132municipality.png');
 
 -- --------------------------------------------------------
 
@@ -93,16 +93,9 @@ CREATE TABLE `tblchairmanship` (
 --
 
 INSERT INTO `tblchairmanship` (`id`, `title`) VALUES
-(2, 'Presiding Officer'),
-(3, 'Committee on Appropriation'),
-(4, 'Committee on Peace & Order'),
-(5, 'Committee on Health'),
-(6, 'Committee on Education'),
-(7, 'Committee on Rules'),
-(8, 'Committee on Infra'),
-(9, 'Committee on Solid Waste'),
-(10, 'Committee on Sports'),
-(11, 'No Chairmanship');
+(12, 'Infra'),
+(13, 'Consulting'),
+(14, 'Goods');
 
 -- --------------------------------------------------------
 
@@ -112,9 +105,9 @@ INSERT INTO `tblchairmanship` (`id`, `title`) VALUES
 
 CREATE TABLE `tblofficials` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
+  `name` varchar(200) DEFAULT NULL,
   `chairmanship` varchar(50) DEFAULT NULL,
-  `position` varchar(50) DEFAULT NULL,
+  `abc` varchar(200) DEFAULT NULL,
   `termstart` date DEFAULT NULL,
   `termend` date DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL
@@ -124,20 +117,8 @@ CREATE TABLE `tblofficials` (
 -- Dumping data for table `tblofficials`
 --
 
-INSERT INTO `tblofficials` (`id`, `name`, `chairmanship`, `position`, `termstart`, `termend`, `status`) VALUES
-(14, 'SAMUEL C. CAYABYAB', '2', '4', '2017-06-15', '2023-12-18', 'Active'),
-(15, 'Kgd. ERIC C. BULATAO', '11', '7', '2021-06-21', '2023-12-20', 'Active'),
-(16, 'Kgd. REYNALDO L. DE GUZMAN', '11', '8', '2021-06-21', '2023-12-20', 'Active'),
-(17, 'Kgd. BERNABE A. FRIAS', '11', '9', '2021-06-21', '2023-12-20', 'Active'),
-(18, 'Kgd. MELANO M. CAYABYAB', '11', '10', '2021-06-21', '2023-12-20', 'Active'),
-(19, 'Kgd. SALVADOR L. ROSARIO', '11', '11', '2021-06-21', '2023-12-20', 'Active'),
-(20, 'Kgd. VICTORIANO S. BANAAG', '11', '12', '2021-06-21', '2023-12-20', 'Active'),
-(21, 'Kgd. REYNANTE F. CASTANEDA', '11', '13', '2021-06-21', '2023-12-20', 'Active'),
-(22, 'ROMEO M. CACAYAN, SR.', '11', '15', '2021-06-21', '2023-12-20', 'Active'),
-(23, 'MINERVA M. MONDARES', '11', '16', '2021-06-21', '2023-12-20', 'Active'),
-(24, 'LOIDA J. CENTENO', '11', '17', '2021-06-21', '2023-12-20', 'Active'),
-(25, 'GEORGE D. PEREZ', '11', '18', '2021-06-21', '2023-12-20', 'Active'),
-(26, 'JUANITO S. FRIAS', '11', '19', '2021-06-21', '2023-12-20', 'Active');
+INSERT INTO `tblofficials` (`id`, `name`, `chairmanship`, `abc`, `termstart`, `termend`, `status`) VALUES
+(34, 'SUPPLY/DELIVERY OF 3,076 HEADS OF FREE-RANGE CHICKEN, THIS CITY', '14', '3200000', '2024-03-15', '2024-03-16', 'Inactive');
 
 -- --------------------------------------------------------
 
@@ -247,21 +228,25 @@ INSERT INTO `tblprecinct` (`id`, `precinct`, `details`) VALUES
 CREATE TABLE `tblpurok` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `details` text DEFAULT NULL
+  `details` text DEFAULT NULL,
+  `abc` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tblpurok`
 --
 
-INSERT INTO `tblpurok` (`id`, `name`, `details`) VALUES
-(1, 'Purok 1', ''),
-(2, 'Purok 2', ''),
-(3, 'Purok 3', ''),
-(4, 'Purok 4', 'dsfdsf'),
-(5, 'Purok 5', 'rewrew'),
-(6, 'Purok 6', 'rewrewr'),
-(7, 'Purok 7', 'rew');
+INSERT INTO `tblpurok` (`id`, `name`, `details`, `abc`) VALUES
+(17, 'supply/delivery of 20 units of hand tractor, THIS CITY', 'Goods', '1200500'),
+(18, 'SUPPLY/DELIVERY OF 3,000 BAGS OF ORGANIC FERTILIZER, THIS CITY', 'Goods', '1190000'),
+(19, 'SUPPLY/DELIVERY OF 3,000 BAGS OF INORGANIC FERTILIZER, THIS CITY', 'Goods', '230000'),
+(20, 'SUPPLY/DELIVERY OF 3,000 BAGS OF SACHETS OF FOLIAR FERTILIZER, THIS CITY', 'Goods', '950000'),
+(21, 'SUPPLY/DELIVERY OF 10 UNITS OF CORN THRESHER, THIS CITY', 'Goods', '2040300'),
+(22, 'SUPPLY/DELIVERY OF 200 UNITS OF IRRIGATION PUMP, THIS CITY', 'Goods', '12000000'),
+(23, 'SUPPLY/DELIVERY OF 2,000 PIECES OF PVC PIPE, THIS CITY', 'Goods', '900000'),
+(24, 'SUPPLY/DELIVERY OF 200,000 PIECES OF BANGUS FINGERLINGS, THIS CITY', 'Goods', '10000'),
+(25, 'SUPPLY/DELIVERY OF 3,076 HEADS OF FREE-RANGE CHICKEN, THIS CITY', 'Goods', '1500000'),
+(26, 'SUPPLY/DELIVERY AND INSTALLATION OF CCTV AT NEW PUBLIC MARKET, THIS CITY', 'Goods', '1799000');
 
 -- --------------------------------------------------------
 
@@ -272,36 +257,44 @@ INSERT INTO `tblpurok` (`id`, `name`, `details`) VALUES
 CREATE TABLE `tblresident` (
   `id` int(11) NOT NULL,
   `national_id` varchar(100) DEFAULT NULL,
-  `citizenship` varchar(50) DEFAULT NULL,
   `picture` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `firstname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `middlename` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lastname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alias` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `birthplace` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `birthdate` date DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  `civilstatus` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `gender` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `purok` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `voterstatus` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `identified_as` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `firstname` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `phone` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `occupation` varchar(100) DEFAULT NULL,
   `address` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `resident_type` int(11) DEFAULT 1,
-  `remarks` text DEFAULT NULL
+  `purok` varchar(100) DEFAULT NULL,
+  `abc` varchar(200) DEFAULT NULL,
+  `category` varchar(50) NOT NULL,
+  `o_name` varchar(50) DEFAULT NULL,
+  `n_contract` varchar(50) DEFAULT NULL,
+  `c_duration` varchar(50) DEFAULT NULL,
+  `d_contract` varchar(50) DEFAULT NULL,
+  `d_delivery` varchar(50) DEFAULT NULL,
+  `k_goods` varchar(50) DEFAULT NULL,
+  `noa` varchar(50) DEFAULT NULL,
+  `sales` varchar(50) DEFAULT NULL,
+  `production` varchar(50) DEFAULT NULL,
+  `manpower` varchar(50) DEFAULT NULL,
+  `aftersales` varchar(50) DEFAULT NULL,
+  `c_value` varchar(50) DEFAULT NULL,
+  `c_role` varchar(50) DEFAULT NULL,
+  `d_completion` varchar(50) DEFAULT NULL,
+  `n_work` varchar(50) DEFAULT NULL,
+  `v_completion` varchar(50) DEFAULT NULL,
+  `percentage` varchar(50) DEFAULT NULL,
+  `notice` varchar(50) DEFAULT NULL,
+  `cert` varchar(50) DEFAULT NULL,
+  `resident_type` int(11) DEFAULT 1
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblresident`
 --
 
-INSERT INTO `tblresident` (`id`, `national_id`, `citizenship`, `picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, `age`, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, `occupation`, `address`, `resident_type`, `remarks`) VALUES
-(183, '40242959393', 'Filipino', '18052023175314test.jfif', 'Gereson', 'Carlos', 'De Vera', 'Greg', 'Plaridel', '2021-02-22', 3, 'Single', 'Male', 'Purok 2', 'No', '', 'N/A', 'jude53@gmail.com', 'N/A', 'San Carlos City, Pangasinan\r\n', 1, NULL),
-(182, '3123122', 'Filipino', '18052023171007test1.jfif', 'Bartolome', 'M', 'Madlangpuppy', '', 'Metro  Manila', '2013-02-02', 14, 'Single', 'Female', 'Purok 6', 'No', '', '0340305230', 'rrrrr@gmail.com', 'Student', 'Bayambang, Pangasinan', 1, NULL),
-(181, '6547679965743', 'Filipino', '18052023170414dors.jpg', 'Nic', 'Poe', 'De Vera', 'FPJ', 'Pangasinan', '2018-02-03', 12, 'Single', 'Male', 'Purok 1', 'No', '', '0423943592', 'cajanr02@gmail.com', 'N/A', 'San Carlos City, Pangasinan', 1, NULL);
+INSERT INTO `tblresident` (`id`, `national_id`, `picture`, `firstname`, `phone`, `email`, `address`, `purok`, `abc`, `category`, `o_name`, `n_contract`, `c_duration`, `d_contract`, `d_delivery`, `k_goods`, `noa`, `sales`, `production`, `manpower`, `aftersales`, `c_value`, `c_role`, `d_completion`, `n_work`, `v_completion`, `percentage`, `notice`, `cert`, `resident_type`) VALUES
+(204, '0117261', 'person.png', 'AQUINO-DELA CRUZ ENGINEERING AND CONSTRUCTION', '', '', 'asd', 'SUPPLY/DELIVERY AND INSTALLATION OF CCTV AT NEW PUBLIC MARKET, THIS CITY', '1799000', 'Infra', 'Pass', 'Pass', 'Pass', 'Pass', '', '', '', '', '', '', '', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 1),
+(208, '6547679965743', 'person.png', '5J MACHINERY AND CONSTRUCTION', '', '', 'cyfg', 'SUPPLY/DELIVERY OF 20 UNITS OF HAND TRACTOR, THIS CITY', '1200500', 'Goods', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 'Fail', '', '', '', '', '', '', '', '', 1),
+(207, '3123122', 'person.png', 'AQUINO-DELA CRUZ BUSINESS AND FINANCE CLOSURE', '', '', 'jcjv', 'SUPPLY/DELIVERY AND INSTALLATION OF CCTV AT NEW PUBLIC MARKET, THIS CITY', '1799000', 'Goods', 'Pass', 'Pass', 'Pass', 'Pass', '', '', '', '', '', '', '', 'Pass', 'Pass', 'Fail', 'Pass', 'Pass', 'Pass', 'Pass', 'Pass', 1);
 
 -- --------------------------------------------------------
 
@@ -438,13 +431,13 @@ ALTER TABLE `tblbrgy_info`
 -- AUTO_INCREMENT for table `tblchairmanship`
 --
 ALTER TABLE `tblchairmanship`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tblofficials`
 --
 ALTER TABLE `tblofficials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `tblpayments`
@@ -474,13 +467,13 @@ ALTER TABLE `tblprecinct`
 -- AUTO_INCREMENT for table `tblpurok`
 --
 ALTER TABLE `tblpurok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tblresident`
 --
 ALTER TABLE `tblresident`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 
 --
 -- AUTO_INCREMENT for table `tbl_support`
